@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Sudoku - Pure Javascript PWA</title>
+  	<title>PWA Sudoku</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#2060cc" >
+	<link rel="manifest" href="manifest.json">
+	<meta name="viewport" content= "width=device-width, user-scalable=0, initial-scale=1">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177860187-1"></script><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="finish-new-game" class="win-win">
+  <div class="win-card">
+    <h2>Congrats!!<br>You win!!</h2>
+    <div class="newgame">
+      <button class="btn" onclick='let level=document.querySelector("#con1");let leveld=level.style.display;level.style.display=(leveld=="block")?"none":"block"'>New Game</button>
+      <div class="level-container" id="con1">
+        <div class="game-level">Easy</div>
+        <div class="game-level">Medium</div>
+        <div class="game-level">Hard</div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="sudoku">
+  <header class="table-header">
+    <div class="newgame">
+      <button class="btn" onclick='let level=document.querySelector("#con2");let leveld=level.style.display;level.style.display=(leveld=="block")?"none":"block"'>New Game</button>
+      <div class="level-container" id="con2">
+        <div class="game-level">Easy</div>
+        <div class="game-level">Medium</div>
+        <div class="game-level">Hard</div>
+      </div>
+    </div>
+    <button class="btn" onclick='checkAll(this)'>Check</button>
+    <button class="btn" onclick='resetGrid()'>Reset</button>
+  </header>
+  <table id="table-container">
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+    <tr>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+      <td class="box"></td>
+    </tr>
+  </table>
+  <section id="numpad">
+    <button class="numkey">1</button>
+    <button class="numkey">2</button>
+    <button class="numkey">3</button>
+    <button class="numkey">4</button>
+    <button class="numkey">5</button>
+    <button class="numkey">6</button>
+    <button class="numkey">7</button>
+    <button class="numkey">8</button>
+    <button class="numkey">9</button>
+    <button class="numkey">C</button>
+  </section>
+</section>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'UA-177860187-1');
+</script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
